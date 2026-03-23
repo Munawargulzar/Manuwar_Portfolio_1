@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MANUWAR GULZAR — FULL-STACK DEVELOPER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@100;400;700;900&family=Fragment+Mono:ital@0;1&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Lightning canvas -->
+  <canvas id="lightning-canvas" aria-hidden="true"></canvas>
+
+  <!-- Noise grain overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cur" aria-hidden="true">
+    <div class="cur-inner"></div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="toast-bar"></span>
+    <i class="fas fa-terminal"></i>
+    <span id="toastMsg"></span>
+  </div>
+
+  <!-- ════ TICKER ════ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>MANUWAR GULZAR</span><span class="tdiv">◼</span>
+      <span>FULL-STACK DEVELOPER</span><span class="tdiv">◼</span>
+      <span>BATH SPA UNIVERSITY · RAK</span><span class="tdiv">◼</span>
+      <span>OPEN TO WORK</span><span class="tdiv">◼</span>
+      <span>NODE.JS · PYTHON · REACT</span><span class="tdiv">◼</span>
+      <span>UI/UX · AI/ML</span><span class="tdiv">◼</span>
+      <span>MANUWAR GULZAR</span><span class="tdiv">◼</span>
+      <span>FULL-STACK DEVELOPER</span><span class="tdiv">◼</span>
+      <span>BATH SPA UNIVERSITY · RAK</span><span class="tdiv">◼</span>
+      <span>OPEN TO WORK</span><span class="tdiv">◼</span>
+      <span>NODE.JS · PYTHON · REACT</span><span class="tdiv">◼</span>
+      <span>UI/UX · AI/ML</span><span class="tdiv">◼</span>
+    </div>
+  </div>
+
+  <!-- ════ NAVBAR ════ -->
+  <nav id="nav">
+    <a href="#home" class="n-logo" data-cursor="big">
+      <span class="logo-mg">MG</span><span class="logo-slash">/</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"         class="nav-a">Home</a></li>
+      <li><a href="#about"        class="nav-a">About</a></li>
+      <li><a href="#services"     class="nav-a">Services</a></li>
+      <li><a href="#experience"   class="nav-a">Experience</a></li>
+      <li><a href="#certificates" class="nav-a">Certs</a></li>
+      <li><a href="#portfolio"    class="nav-a">Work</a></li>
+      <li><a href="#contact"      class="nav-a">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme" data-cursor="big">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <a href="Manuwar_CV.pdf" target="_blank" class="nav-cv" data-cursor="big">
+        <i class="fas fa-arrow-down"></i> CV
+      </a>
+    </div>
+    <button class="hbg" id="hbg" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="m-nav" id="mNav">
+    <button class="m-close" id="mClose"><i class="fas fa-times"></i></button>
+    <div class="m-links">
+      <a href="#home"         onclick="closeNav()"><span class="mn-num">01</span>Home</a>
+      <a href="#about"        onclick="closeNav()"><span class="mn-num">02</span>About</a>
+      <a href="#services"     onclick="closeNav()"><span class="mn-num">03</span>Services</a>
+      <a href="#experience"   onclick="closeNav()"><span class="mn-num">04</span>Experience</a>
+      <a href="#certificates" onclick="closeNav()"><span class="mn-num">05</span>Certificates</a>
+      <a href="#portfolio"    onclick="closeNav()"><span class="mn-num">06</span>Portfolio</a>
+      <a href="#contact"      onclick="closeNav()"><span class="mn-num">07</span>Contact</a>
+    </div>
+    <a href="Manuwar_CV.pdf" target="_blank" class="m-cv">Download CV <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+  <!-- ════ HERO ════ -->
+  <section id="home" class="hero">
+    <!-- Floating sparks -->
+    <div class="hero-sparks" aria-hidden="true">
+      <span class="hspark hs1"></span>
+      <span class="hspark hs2"></span>
+      <span class="hspark hs3"></span>
+      <span class="hspark hs4"></span>
+      <span class="hspark hs5"></span>
+      <span class="hspark hs6"></span>
+    </div>
+    <div class="hero-bg-lines" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="he-line"></span>
+        <span class="he-tag">001 — PORTFOLIO — 2026</span>
+        <span class="he-line"></span>
+        <span class="he-avail"><span class="avail-dot"></span>AVAILABLE</span>
+      </div>
+
+      <h1 class="hero-h1">
+        <span class="h1-line h1-a" data-glitch="MANUWAR">MANUWAR</span>
+        <span class="h1-line h1-b">GULZAR</span>
+      </h1>
+
+      <div class="hero-role-row">
+        <div class="role-item">Full-Stack<br>Developer</div>
+        <div class="role-divider">//</div>
+        <div class="role-item">UI/UX<br>Designer</div>
+        <div class="role-divider">//</div>
+        <div class="role-item">AI &amp;<br>Python</div>
+      </div>
+
+      <p class="hero-bio">
+        Final-year Creative Computing @ Bath Spa University, RAK.
+        I build fast systems and striking digital products —
+        from Node.js backends to pixel-perfect interfaces.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#portfolio" class="btn-primary" data-cursor="big">
+          <span>View Work</span><i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="Manuwar_CV.pdf" target="_blank" class="btn-ghost" data-cursor="big" onclick="showToast('// CV DOWNLOAD INITIATED')">
+          <i class="fas fa-download"></i><span>Download CV</span>
+        </a>
+        <a href="#contact" class="btn-ghost" data-cursor="big">
+          <i class="fas fa-envelope"></i><span>Hire Me</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-stats-col">
+      <div class="hstat">
+        <div class="hstat-n">30<span class="hstat-plus">+</span></div>
+        <div class="hstat-l">Projects<br>Shipped</div>
+      </div>
+      <div class="hstat-rule"></div>
+      <div class="hstat">
+        <div class="hstat-n">3<span class="hstat-plus">+</span></div>
+        <div class="hstat-l">Years<br>Active</div>
+      </div>
+      <div class="hstat-rule"></div>
+      <div class="hstat">
+        <div class="hstat-n">&#8734;</div>
+        <div class="hstat-l">Lines<br>Coded</div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero-scroll-hint" aria-label="Scroll down">
+      <span class="scroll-pulse-ring"></span>
+      <span class="scroll-pulse-ring r2"></span>
+      <svg class="scroll-bolt-icon" viewBox="0 0 24 52" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2L3 28h8L8 50 22 22H14Z" fill="currentColor"/>
+      </svg>
+      <span>SCROLL</span>
+    </a>
+  </section>
+
+  <!-- ════ SKILLS MARQUEE ════ -->
+  <div class="skills-marquee" aria-hidden="true">
+    <div class="sm-track">
+      <span>JavaScript</span><span class="sm-dot">✦</span>
+      <span>Node.js</span><span class="sm-dot">✦</span>
+      <span>Python</span><span class="sm-dot">✦</span>
+      <span>React</span><span class="sm-dot">✦</span>
+      <span>Next.js</span><span class="sm-dot">✦</span>
+      <span>MongoDB</span><span class="sm-dot">✦</span>
+      <span>Express.js</span><span class="sm-dot">✦</span>
+      <span>Figma</span><span class="sm-dot">✦</span>
+      <span>Dialogflow</span><span class="sm-dot">✦</span>
+      <span>Kaggle / ML</span><span class="sm-dot">✦</span>
+      <span>Android Studio</span><span class="sm-dot">✦</span>
+      <span>Unity / C#</span><span class="sm-dot">✦</span>
+      <span>JavaScript</span><span class="sm-dot">✦</span>
+      <span>Node.js</span><span class="sm-dot">✦</span>
+      <span>Python</span><span class="sm-dot">✦</span>
+      <span>React</span><span class="sm-dot">✦</span>
+      <span>Next.js</span><span class="sm-dot">✦</span>
+      <span>MongoDB</span><span class="sm-dot">✦</span>
+      <span>Express.js</span><span class="sm-dot">✦</span>
+      <span>Figma</span><span class="sm-dot">✦</span>
+      <span>Dialogflow</span><span class="sm-dot">✦</span>
+      <span>Kaggle / ML</span><span class="sm-dot">✦</span>
+      <span>Android Studio</span><span class="sm-dot">✦</span>
+      <span>Unity / C#</span><span class="sm-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ════ ABOUT ════ -->
+  <section id="about" class="section">
+    <div class="sec-label reveal">02 — ABOUT_ME</div>
+    <div class="container">
+      <h2 class="sec-title reveal">Who I <em>Am.</em></h2>
+
+      <div class="about-grid">
+        <div class="about-img-col reveal">
+          <div class="about-img-frame">
+            <img src="/images/profile.jpeg" alt="Manuwar Gulzar"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="img-ph"><span>MG</span></div>
+            <div class="img-corner c-tl"></div>
+            <div class="img-corner c-tr"></div>
+            <div class="img-corner c-bl"></div>
+            <div class="img-corner c-br"></div>
+          </div>
+          <div class="about-data-card reveal">
+            <div class="adc-row"><span>Name</span><span>Manuwar Gulzar</span></div>
+            <div class="adc-row"><span>Role</span><span class="orange-txt">Full-Stack Dev</span></div>
+            <div class="adc-row"><span>Uni</span><span>Bath Spa Uni, RAK</span></div>
+            <div class="adc-row"><span>Base</span><span>Sharjah, UAE</span></div>
+            <div class="adc-row"><span>Status</span><span class="green-txt"><span class="avail-dot"></span> Available</span></div>
+          </div>
+        </div>
+
+        <div class="about-text-col">
+          <p class="reveal">My name is <strong>Manuwar Gulzar.</strong> I'm a disciplined Full-Stack Developer and final-year Creative Computing student at Bath Spa University RAK, specialising in fast, scalable systems using Node.js, Python, and Cloud APIs.</p>
+          <blockquote class="pull-quote reveal">"Code is craft. Design is intent. I won't ship anything that doesn't make people stop and think."</blockquote>
+          <p class="reveal">I've shipped CSS dashboards, AI tools, and e-commerce platforms. My stack: JS, Node.js, Python, SQL, and cloud APIs. I work fast, keep commits clean, and give honest estimates. Currently seeking a high-impact team to bring this method to.</p>
+
+          <div class="about-links reveal">
+            <a href="https://github.com/Munawargulzar" target="_blank" class="alink"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/manuwar-gulzar-butt-259100352/" target="_blank" class="alink"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="/cdn-cgi/l/email-protection#59342c37382e382b3e2c3523382b6f69193e34383035773a3634" class="alink"><i class="fas fa-envelope"></i> Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ SERVICES ════ -->
+  <section id="services" class="section sec-dark">
+    <div class="sec-label reveal">03 — SERVICES</div>
+    <div class="container">
+      <h2 class="sec-title reveal">What I <em>Do.</em></h2>
+      <div class="serv-list">
+
+        <div class="serv-row reveal" data-num="01">
+          <div class="sr-left">
+            <i class="fas fa-layer-group sr-icon"></i>
+            <h3>Web Developer</h3>
+          </div>
+          <p>End-to-end digital products. Frontends in HTML/CSS/JS with scalable Node.js or Express.js backends. Full pipeline from auth to deployment.</p>
+          <div class="sr-tags"><span>HTML</span><span>CSS</span><span>JS</span><span>Node.js</span></div>
+          <div class="sr-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="serv-row reveal" data-num="02">
+          <div class="sr-left">
+            <i class="fas fa-terminal sr-icon"></i>
+            <h3>Python Developer</h3>
+          </div>
+          <p>High-performance engineering. Data processing to automation scripts — Python built for speed, security, and brutal reliability.</p>
+          <div class="sr-tags"><span>Python</span><span>FastAPI</span><span>Automation</span></div>
+          <div class="sr-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="serv-row reveal" data-num="03">
+          <div class="sr-left">
+            <i class="fas fa-pen-nib sr-icon"></i>
+            <h3>UX / UI Designer</h3>
+          </div>
+          <p>Design with intent. High-fidelity, pixel-precise Figma interfaces focused on user flow, visual command, and seamless accessibility.</p>
+          <div class="sr-tags"><span>Figma</span><span>Adobe XD</span><span>Canva</span></div>
+          <div class="sr-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="serv-row reveal" data-num="04">
+          <div class="sr-left">
+            <i class="fas fa-brain sr-icon"></i>
+            <h3>AI &amp; Machine Learning</h3>
+          </div>
+          <p>Beyond the notebook. Deploying Dialogflow chatbots and Kaggle-grade ML models into production that solve real problems.</p>
+          <div class="sr-tags"><span>Dialogflow</span><span>Kaggle</span><span>Scikit-learn</span></div>
+          <div class="sr-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="serv-row reveal" data-num="05">
+          <div class="sr-left">
+            <i class="fas fa-database sr-icon"></i>
+            <h3>Backend &amp; APIs</h3>
+          </div>
+          <p>RESTful and GraphQL APIs for production traffic. Database design, rate limiting, caching — zero half-measures.</p>
+          <div class="sr-tags"><span>REST</span><span>GraphQL</span><span>MongoDB</span></div>
+          <div class="sr-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="serv-row reveal" data-num="06">
+          <div class="sr-left">
+            <i class="fas fa-mobile-alt sr-icon"></i>
+            <h3>Mobile Apps</h3>
+          </div>
+          <p>Cross-platform mobile applications using Android Studio and Kotlin with high performance and visual consistency on every device.</p>
+          <div class="sr-tags"><span>Kotlin</span><span>Android</span><span>Unity</span></div>
+          <div class="sr-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ EXPERIENCE ════ -->
+  <section id="experience" class="section">
+    <div class="sec-label reveal">04 — EXPERIENCE &amp; EDUCATION</div>
+    <div class="container">
+      <h2 class="sec-title reveal">The <em>Journey.</em></h2>
+      <div class="exp-layout">
+
+        <div class="exp-col">
+          <div class="exp-col-hd reveal"><i class="fas fa-briefcase"></i> Projects</div>
+
+          <div class="exp-item reveal">
+            <div class="ei-year">2026</div>
+            <div class="ei-body">
+              <h4>Weekends Trip Website Platform</h4>
+              <h5>Tomorrow's Web</h5>
+              <p>Full-stack travel ecosystem. High-performance search algorithms and commanding UI — redefines weekend getaway discovery.</p>
+              <div class="ei-tags"><span>Full-Stack</span><span>Node.js</span></div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="ei-year">2025</div>
+            <div class="ei-body">
+              <h4>Client Project for Company Creation</h4>
+              <h5>Creative Industry Challenge</h5>
+              <p>Full-scale digital transformation — entire corporate identity from scratch bridging creative design with robust infrastructure.</p>
+              <div class="ei-tags"><span>Branding</span><span>Web Dev</span></div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="ei-year">2025</div>
+            <div class="ei-body">
+              <h4>Poker Game Application</h4>
+              <h5>Smartphone App Design</h5>
+              <p>Mobile-first gaming with real-time state management and pixel-precise UI handling complex multiplayer game logic.</p>
+              <div class="ei-tags"><span>Android Studio</span><span>Kotlin</span></div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="ei-year">2024</div>
+            <div class="ei-body">
+              <h4>Group Debate Engine</h4>
+              <h5>Emerging Technologies</h5>
+              <p>AI + social tech platform for structured digital discourse using real-time data streams and sentiment analysis.</p>
+              <div class="ei-tags"><span>AI</span><span>Real-time</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-col">
+          <div class="exp-col-hd reveal"><i class="fas fa-graduation-cap"></i> Education</div>
+
+          <div class="exp-item reveal">
+            <div class="ei-year">2023<br>—<br>Now</div>
+            <div class="ei-body">
+              <h4>BSc (Hons) Creative Computing</h4>
+              <h5>Bath Spa University, RAK UAE (UK Curriculum)</h5>
+              <p>Full-stack architecture, emerging tech, and user-centric digital experiences within a rigorous UK curriculum.</p>
+              <div class="ei-tags"><span>Full-Stack</span><span>UK Curriculum</span></div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="ei-year">2014<br>—<br>2022</div>
+            <div class="ei-body">
+              <h4>High School Degree</h4>
+              <h5>Al Amaal English High School, Sharjah UAE (FBISE)</h5>
+              <p>Mathematics and Science focus — developed the logical framework essential for complex software engineering.</p>
+              <div class="ei-tags"><span>FBISE</span><span>Sciences</span></div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="ei-year">2008<br>—<br>2013</div>
+            <div class="ei-body">
+              <h4>Junior Education</h4>
+              <h5>Nobal Grammar School, Pakistan</h5>
+              <p>Academic foundation in sciences and mathematics — sparked early interest in logical problem-solving.</p>
+              <div class="ei-tags"><span>Foundation</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CERTIFICATES ════ -->
+  <section id="certificates" class="section sec-dark">
+    <div class="sec-label reveal">05 — CREDENTIALS</div>
+    <div class="container">
+      <h2 class="sec-title reveal">Certifi<em>cates.</em></h2>
+      <p class="certs-hint reveal">// Click any certificate to view full image</p>
+      <div class="certs-grid">
+ 
+        <div class="cert-card reveal"
+             data-cert-index="0"
+             data-cert-img="images/image.png"
+             data-cert-title="HTML Essential Training"
+             data-cert-issuer="LinkedIn Learning · 2026">
+          <div class="cc-accent linkedin-acc"></div>
+          <div class="cc-header">
+            <div class="cc-icon li-icon"><i class="fab fa-linkedin"></i></div>
+            <span class="cc-badge">Verified</span>
+          </div>
+          <div class="cert-thumb">
+            <img src="images/image.png" alt="HTML Essential Training Certificate" />
+            <div class="cert-thumb-ov"><i class="fas fa-expand"></i> View</div>
+          </div>
+          <div class="cc-code">ID — ebccd8561... · 2026</div>
+          <h3>HTML Essential Training</h3>
+          <h4>LinkedIn Learning</h4>
+          <p>In-depth HTML5 structures, semantic elements, and modern web accessibility standards.</p>
+          <div class="cc-tags"><span>HTML5</span><span>Structure</span><span>Web Standards</span></div>
+          <a href="image.pdf" class="cc-verify" target="_blank">Verify Credential <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+ 
+        <div class="cert-card reveal"
+             data-cert-index="1"
+             data-cert-img="images/image (1).png"
+             data-cert-title="Career Paths with SQL"
+             data-cert-issuer="LinkedIn Learning · 2026">
+          <div class="cc-accent linkedin-acc"></div>
+          <div class="cc-header">
+            <div class="cc-icon li-icon"><i class="fas fa-database"></i></div>
+            <span class="cc-badge">Verified</span>
+          </div>
+          <div class="cert-thumb">
+            <img src="images/image (1).png" alt="Career Paths with SQL Certificate" />
+            <div class="cert-thumb-ov"><i class="fas fa-expand"></i> View</div>
+          </div>
+          <div class="cc-code">ID — dc85e8a8c... · 2026</div>
+          <h3>Career Paths with SQL</h3>
+          <h4>LinkedIn Learning</h4>
+          <p>Relational databases, query logic, and data-driven career development paths.</p>
+          <div class="cc-tags"><span>SQL</span><span>Data Analysis</span><span>Databases</span></div>
+          <a href="image (1).pdf" class="cc-verify" target="_blank">Verify Credential <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+ 
+        <div class="cert-card reveal"
+             data-cert-index="2"
+             data-cert-img="images/image (2).png"
+             data-cert-title="Intro to Machine Learning"
+             data-cert-issuer="Kaggle Learn · 2025">
+          <div class="cc-accent kaggle-acc"></div>
+          <div class="cc-header">
+            <div class="cc-icon kg-icon"><i class="fab fa-kaggle"></i></div>
+            <span class="cc-badge cc-badge-kg">Verified</span>
+          </div>
+          <div class="cert-thumb">
+            <img src="images/image (2).png" alt="Intro to Machine Learning Certificate" />
+            <div class="cert-thumb-ov"><i class="fas fa-expand"></i> View</div>
+          </div>
+          <div class="cc-code">ID — KAG-2025 · 2025</div>
+          <h3>Intro to Machine Learning</h3>
+          <h4>Kaggle Learn</h4>
+          <p>Practical application of Random Forests and Decision Trees to predict target outcomes using Python.</p>
+          <div class="cc-tags"><span>Python</span><span>ML Models</span><span>Scikit-Learn</span></div>
+          <a href="image (2).pdf" class="cc-verify" target="_blank">Verify Credential <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ════ CERTIFICATE LIGHTBOX ════ -->
+  <div class="lb-overlay" id="lbOverlay" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+    <div class="lb-box">
+      <!-- Top bar -->
+      <div class="lb-topbar">
+        <div class="lb-meta">
+          <span class="lb-counter" id="lbCounter">1 / 3</span>
+          <span class="lb-sep">//</span>
+          <span class="lb-title" id="lbTitle">Certificate</span>
+          <span class="lb-issuer" id="lbIssuer"></span>
+        </div>
+        <button class="lb-close" id="lbClose" aria-label="Close lightbox">
+          <i class="fas fa-times"></i> CLOSE
+        </button>
+      </div>
+ 
+      <!-- Image area -->
+      <div class="lb-img-wrap">
+        <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous certificate">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="lb-img-frame">
+          <img src="" alt="" id="lbImg" />
+          <div class="lb-loading" id="lbLoading"><i class="fas fa-spinner fa-spin"></i></div>
+        </div>
+        <button class="lb-arrow lb-next" id="lbNext" aria-label="Next certificate">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+ 
+      <!-- Dot indicators -->
+      <div class="lb-dots" id="lbDots"></div>
+    </div>
+  </div>
+
+  <!-- ════ PORTFOLIO ════ -->
+  <section id="portfolio" class="section">
+    <div class="sec-label reveal">06 — SELECTED WORK</div>
+    <div class="container">
+      <h2 class="sec-title reveal">Portfolio.</h2>
+
+      <div class="pf-bar reveal">
+        <button class="pf-btn active" data-cat="all">All</button>
+        <button class="pf-btn" data-cat="fullstack">Full-Stack</button>
+        <button class="pf-btn" data-cat="frontend">Frontend</button>
+        <button class="pf-btn" data-cat="ai">AI / ML</button>
+        <span class="pf-count" id="pfCount">6 projects</span>
+      </div>
+
+      <div class="pf-grid" id="pfGrid">
+
+        <div class="pf-card pf-wide reveal" data-cat="fullstack">
+          <div class="pfc-img pf-c1">
+            <img src="/images/WTRIP.jpg" alt="Weekends Trip"
+              onerror="this.style.display='none'" />
+            <div class="pfc-ov">
+              <a href="https://github.com/Munawargulzar/Weekend-Trip" target="_blank" class="pfc-open-btn">Open Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="pfc-meta">
+            <div class="pfc-type">Full-Stack · 001</div>
+            <h3>Weekends Trip Platform</h3>
+            <p>Full-stack travel ecosystem with dynamic itinerary planning, location filtering, and user auth. Node.js backend.</p>
+            <a href="https://github.com/Munawargulzar/Weekend-Trip" target="_blank" class="pfc-link">GitHub <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="pf-card reveal" data-cat="ai">
+          <div class="pfc-img pf-c2">
+            <img src="images/Airbub.jpg" alt="Airbnb Predictor" onerror="this.style.display='none'" />
+            <div class="pfc-ov"><a href="https://www.kaggle.com/code/munawargulzar/predicting-airbnb-rental-price" target="_blank" class="pfc-open-btn">Open <i class="fas fa-arrow-right"></i></a></div>
+          </div>
+          <div class="pfc-meta">
+            <div class="pfc-type">AI / ML · 002</div>
+            <h3>Airbnb Rental Predictor</h3>
+            <p>Regression ML model for rental pricing using Python &amp; Scikit-learn.</p>
+            <a href="https://www.kaggle.com/code/munawargulzar/predicting-airbnb-rental-price" target="_blank" class="pfc-link">Kaggle <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="pf-card reveal" data-cat="frontend">
+          <div class="pfc-img pf-c3">
+            <img src="images/motor car.jpg" alt="Motor Car UI" onerror="this.style.display='none'" />
+            <div class="pfc-ov"><a href="https://munawargulzar.github.io/munawar.github.io/" target="_blank" class="pfc-open-btn">Open <i class="fas fa-arrow-right"></i></a></div>
+          </div>
+          <div class="pfc-meta">
+            <div class="pfc-type">Frontend · 003</div>
+            <h3>Motor Car UI</h3>
+            <p>Automotive interface with responsive design and high-fidelity visualization.</p>
+            <a href="https://munawargulzar.github.io/munawar.github.io/" target="_blank" class="pfc-link">Live <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="pf-card reveal" data-cat="fullstack">
+          <div class="pfc-img pf-c4">
+            <img src="images/car values.jpg" alt="Car Values" onerror="this.style.display='none'" />
+            <div class="pfc-ov"><a href="https://web-dev2-project.vercel.app/" target="_blank" class="pfc-open-btn">Open <i class="fas fa-arrow-right"></i></a></div>
+          </div>
+          <div class="pfc-meta">
+            <div class="pfc-type">Full-Stack · 004</div>
+            <h3>Car Values Platform</h3>
+            <p>End-to-end valuation tool with backend pricing logic and live dashboard.</p>
+            <a href="https://web-dev2-project.vercel.app/" target="_blank" class="pfc-link">Live <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="pf-card reveal" data-cat="ai">
+          <div class="pfc-img pf-c5">
+            <img src="images/Smart App.png" alt="Smart App" onerror="this.style.display='none'" />
+            <div class="pfc-ov"><a href="https://www.kaggle.com/code/munawargulzar/excercise-2-classification-task" target="_blank" class="pfc-open-btn">Open <i class="fas fa-arrow-right"></i></a></div>
+          </div>
+          <div class="pfc-meta">
+            <div class="pfc-type">AI / ML · 005</div>
+            <h3>Smart App Predictor</h3>
+            <p>Time-series ML to predict user behavior and optimize app performance.</p>
+            <a href="https://www.kaggle.com/code/munawargulzar/excercise-2-classification-task" target="_blank" class="pfc-link">Kaggle <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="pf-card reveal" data-cat="frontend">
+          <div class="pfc-img pf-c6">
+            <img src="images/WebDevelopmentProjects2.png" alt="Dev Suite" onerror="this.style.display='none'" />
+            <div class="pfc-ov"><a href="https://github.com/Munawargulzar/web-development" target="_blank" class="pfc-open-btn">Open <i class="fas fa-arrow-right"></i></a></div>
+          </div>
+          <div class="pfc-meta">
+            <div class="pfc-type">Frontend · 006</div>
+            <h3>Dev Task Suite</h3>
+            <p>High-end UI components demonstrating CSS architecture and JS performance mastery.</p>
+            <a href="https://github.com/Munawargulzar/web-development" target="_blank" class="pfc-link">GitHub <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CV BANNER ════ -->
+  <div class="cv-strip">
+    <div class="cv-strip-text">
+      <span class="cvs-label">// CURRICULUM VITAE</span>
+      <h2>Download<br><em>My CV.</em></h2>
+      <p>Full résumé — skills, projects, certifications &amp; education.</p>
+    </div>
+    <div class="cv-strip-actions">
+      <a href="Manuwar_CV.pdf" target="_blank" class="btn-cv-dl" onclick="showToast('// CV DOWNLOAD INITIATED')">
+        <i class="fas fa-file-pdf"></i> CV.PDF
+      </a>
+      <a href="#contact" class="btn-cv-contact">
+        <i class="fas fa-envelope"></i> Contact
+      </a>
+    </div>
+    <div class="cvs-deco" aria-hidden="true">CV</div>
+    <!-- CV strip lightning bolts -->
+    <svg class="cv-strip-bolt cvb1" viewBox="0 0 24 52"><path d="M16 2L3 28h8L8 50 22 22H14Z" fill="currentColor"/></svg>
+    <svg class="cv-strip-bolt cvb2" viewBox="0 0 24 52"><path d="M16 2L3 28h8L8 50 22 22H14Z" fill="currentColor"/></svg>
+    <svg class="cv-strip-bolt cvb3" viewBox="0 0 24 52"><path d="M16 2L3 28h8L8 50 22 22H14Z" fill="currentColor"/></svg>
+    <svg class="cv-strip-bolt cvb4" viewBox="0 0 24 52"><path d="M16 2L3 28h8L8 50 22 22H14Z" fill="currentColor"/></svg>
+    <svg class="cv-strip-bolt cvb5" viewBox="0 0 24 52"><path d="M16 2L3 28h8L8 50 22 22H14Z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- ════ CONTACT ════ -->
+  <section id="contact" class="section">
+    <div class="sec-label reveal">07 — CONTACT</div>
+    <div class="container">
+      <h2 class="sec-title reveal">Let's <em>Build.</em></h2>
+
+      <div class="contact-layout">
+        <div class="contact-left reveal">
+          <p class="contact-sub">Got a project? Need a developer who ships? Don't overthink it — just reach out. I reply within 24 hours.</p>
+
+          <div class="ci-list">
+            <a href="/cdn-cgi/l/email-protection#ee839b808f998f9c899b82948f9cd8deae89838f8782c08d8183" class="ci-row">
+              <span class="ci-sym">@</span>
+              <div><strong>Email</strong><span><span class="__cf_email__" data-cfemail="f09d859e9187918297859c8a9182c6c0b0979d91999cde939f9d">[email&#160;protected]</span></span></div>
+            </a>
+            <a href="tel:+971564612641" class="ci-row">
+              <span class="ci-sym">#</span>
+              <div><strong>Phone</strong><span>+971 56 461 2641</span></div>
+            </a>
+            <div class="ci-row">
+              <span class="ci-sym">↗</span>
+              <div><strong>Location</strong><span>Al Mujarrah, Sharjah, UAE</span></div>
+            </div>
+          </div>
+
+          <div class="socials-row">
+            <a href="https://github.com/Munawargulzar" target="_blank" class="soc-btn"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/manuwar-gulzar-butt-259100352/" target="_blank" class="soc-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/amber__butt__?igsh=Zmd1NGFibGo4cXdh" target="_blank" class="soc-btn"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@munawargulzar-fe1ci/featured" target="_blank" class="soc-btn"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="cf-row">
+            <div class="cf-group">
+              <label for="cname">// NAME</label>
+              <input type="text" id="cname" placeholder="Your name" />
+            </div>
+            <div class="cf-group">
+              <label for="cemail">// EMAIL</label>
+              <input type="email" id="cemail" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="cf-row">
+            <div class="cf-group">
+              <label for="ctype">// PROJECT TYPE</label>
+              <select id="ctype">
+                <option value="">Select type</option>
+                <option>Full-Stack App</option>
+                <option>Frontend Only</option>
+                <option>Backend / API</option>
+                <option>AI / ML</option>
+                <option>UI / UX Design</option>
+                <option>Others</option>
+              </select>
+            </div>
+            <div class="cf-group">
+              <label for="ctimeline">// TIMELINE</label>
+              <select id="ctimeline">
+                <option value="">Select timeline</option>
+                <option>ASAP</option>
+                <option>1 – 3 months</option>
+                <option>3 – 6 months</option>
+                <option>Ongoing</option>
+              </select>
+            </div>
+          </div>
+          <div class="cf-group cf-full">
+            <label for="cmsg">// MESSAGE</label>
+            <textarea id="cmsg" rows="5" placeholder="Describe your project in detail..."></textarea>
+          </div>
+          <div class="cf-footer">
+            <span class="cf-hint">// Reply within 24 hours</span>
+            <button type="button" class="btn-primary" id="sendBtn">
+              <span>Transmit</span><i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="footer">
+    <div class="container foot-inner">
+      <div class="foot-brand">
+        <div class="foot-logo">MG<span>/</span></div>
+        <p>Full-Stack Developer &amp; Designer<br>Bath Spa University, RAK · 2026</p>
+      </div>
+      <nav class="foot-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="foot-right">
+        <div class="foot-socials">
+          <a href="https://github.com/Munawargulzar" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/manuwar-gulzar-butt-259100352/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/amber__butt__" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@munawargulzar-fe1ci/featured" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <a href="Manuwar_CV.pdf" target="_blank" class="foot-cv" onclick="showToast('// CV DOWNLOAD INITIATED')">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>    <div class="foot-bottom">
+      <span>&#169; 2026 MANUWAR GULZAR &#8212; ALL RIGHTS RESERVED</span>
+      <span>BATH SPA UNIVERSITY RAK &#183; 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
